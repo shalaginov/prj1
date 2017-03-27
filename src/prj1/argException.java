@@ -10,6 +10,6 @@ public class argException {
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void testMaxV() {
-			double result = Program.maxV(-2, 0, 0, 0, 0, 0, 0, 0 );
+			double result = Program.maxV(-2, 150, 250, 0.5, 0, 800, 1400, 750);
 	}
 }

@@ -8,10 +8,10 @@ import org.junit.Test;
 
 public class maxW {
 
-	@Test
+	@Test //аннотация теста
 	public void testMaxW() {
-		double result = Program.maxW(1200, 800, 1400, 750,50, 150, 250, 0.5 );
-		assertTrue(result == 300);
+		double result = Program.maxW(1200, 800, 1400, 750,50, 150, 250, 0.5 ); //тестовые параметры
+		assertTrue(result == 300); //ожидаемый результат
 	}
 
 }

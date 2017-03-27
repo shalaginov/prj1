@@ -8,9 +8,10 @@ import org.junit.Test;
 
 public class calcException {
 
-	@Test (expected = ArithmeticException.class)
+	@Test // аннтоация теста
+	(expected = ArithmeticException.class) //ожидаемый результат Exception при делении на ноль
 	public void testMaxV() {
-		double result = Program.maxV(0, 0, 0, 0, 0, 0, 0, 0 );
+		double result = Program.maxV(50, 150, 250, 0.5, 0, 800, 1400, 750); //тестовые параметры
 	}
 
 }
