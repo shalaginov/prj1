@@ -10,13 +10,13 @@ public class Program {
     	    PrintStream cout = System.out;    	  //штука дл€ вывода в консоль  
     	   
     	    //„тение входных параметров 		
- 		
- 		int iX1 = cin.nextInt();
-    		int iY1 = cin.nextInt();
-    		int iZ1 = cin.nextInt();
-    		double iW1 = cin.nextDouble();
+ 		cout.println("¬ведите данные дл€ расчета в следующем пор€дке: длина груза, ширина груза, высота груза, вес груза и длина €чейки, ширина €чейки, высота €чейки, вес €чейки и нажмите Enter:");
+ 		int iX1 = cin.nextInt(); //считывание длины груза
+    		int iY1 = cin.nextInt(); //считывание ширины груза
+    		int iZ1 = cin.nextInt(); //считывание высоты груза
+    		double iW1 = cin.nextDouble(); //считывание веса груза
 
-	 	int iX0 = cin.nextInt();
+	 	int iX0 = cin.nextInt(); //считывание длины груза
 	 	int iY0 = cin.nextInt();
 	 	int iZ0 = cin.nextInt();
 	 	double iW0 = cin.nextDouble();
@@ -30,6 +30,7 @@ public class Program {
     		double maxW = maxW(iX0, iY0, iZ0, iW0,iX1, iY1, iZ1, iW1) ;
     		
     		// ¬ывод результата на экран
+    		cout.println("–езультаты ( ол-во груза в одной €чейке, общий вес груза, коэфф-т заполн€емости):");
     		cout.printf("%1$d %2$.2f %3$.8f", maxC, maxW, maxV);
     	    cin.close();
     	    
@@ -37,10 +38,10 @@ public class Program {
     	    // –езультат должен быть 600 300 0,84
     }
     
-    public static int maxC(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1)
+    public static int maxC(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // расчет максимального количества груза в одной €чейке
     {
 
-        if (X0 < 0) throw new IllegalArgumentException();
+        if (X0 < 0) throw new IllegalArgumentException(); //Exception если введенна€ переменна€ меньше 1
         if (Y0 < 0) throw new IllegalArgumentException();
         if (Z0 < 0) throw new IllegalArgumentException();
         if (W0 < 0) throw new IllegalArgumentException();
@@ -56,9 +57,9 @@ public class Program {
 		return iXc*iYc*iZc;
     }
 
-    public static double maxW(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1)
+    public static double maxW(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // расчет максимального веса заданного количества груза
     {
-        if (X0 < 0) throw new IllegalArgumentException();
+        if (X0 < 0) throw new IllegalArgumentException();//Exception если введенна€ переменна€ меньше 1
         if (Y0 < 0) throw new IllegalArgumentException();
         if (Z0 < 0) throw new IllegalArgumentException();
         if (W0 < 0) throw new IllegalArgumentException();
@@ -75,9 +76,9 @@ public class Program {
 		return maxC*W1;
     }
 
-    public static double maxV(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1)
+    public static double maxV(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // расчет коэффициента заполн€емости
     {
-        if (X0 < 0) throw new IllegalArgumentException();
+        if (X0 < 0) throw new IllegalArgumentException();//Exception если введенна€ переменна€ меньше 1
         if (Y0 < 0) throw new IllegalArgumentException();
         if (Z0 < 0) throw new IllegalArgumentException();
         if (W0 < 0) throw new IllegalArgumentException();
