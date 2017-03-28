@@ -1,4 +1,4 @@
-package prj1;
+п»їpackage prj1;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -6,22 +6,22 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
 
-    	    Scanner cin = new Scanner(System.in); //штука для чтения из консоли
-    	    PrintStream cout = System.out;    	  //штука для вывода в консоль  
+    	    Scanner cin = new Scanner(System.in); //С€С‚СѓРєР° РґР»СЏ С‡С‚РµРЅРёСЏ РёР· РєРѕРЅСЃРѕР»Рё
+    	    PrintStream cout = System.out;    	  //С€С‚СѓРєР° РґР»СЏ РІС‹РІРѕРґР° РІ РєРѕРЅСЃРѕР»СЊ  
     	   
-    	    //Чтение входных параметров 		
- 		cout.println("Введите данные для расчета в следующем порядке: длина груза, ширина груза, высота груза, вес груза и длина ячейки, ширина ячейки, высота ячейки, вес ячейки и нажмите Enter:");
- 		int iX1 = cin.nextInt(); //считывание длины груза
-    		int iY1 = cin.nextInt(); //считывание ширины груза
-    		int iZ1 = cin.nextInt(); //считывание высоты груза
-    		double iW1 = cin.nextDouble(); //считывание веса груза
+    	    //Р§С‚РµРЅРёРµ РІС…РѕРґРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ 		
+ 		cout.println("Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ РґР»СЏ СЂР°СЃС‡РµС‚Р° РІ СЃР»РµРґСѓСЋС‰РµРј РїРѕСЂСЏРґРєРµ: РґР»РёРЅР° РіСЂСѓР·Р°, С€РёСЂРёРЅР° РіСЂСѓР·Р°, РІС‹СЃРѕС‚Р° РіСЂСѓР·Р°, РІРµСЃ РіСЂСѓР·Р° Рё РґР»РёРЅР° СЏС‡РµР№РєРё, С€РёСЂРёРЅР° СЏС‡РµР№РєРё, РІС‹СЃРѕС‚Р° СЏС‡РµР№РєРё, РІРµСЃ СЏС‡РµР№РєРё Рё РЅР°Р¶РјРёС‚Рµ Enter:");
+ 		int iX1 = cin.nextInt(); //СЃС‡РёС‚С‹РІР°РЅРёРµ РґР»РёРЅС‹ РіСЂСѓР·Р°
+    		int iY1 = cin.nextInt(); //СЃС‡РёС‚С‹РІР°РЅРёРµ С€РёСЂРёРЅС‹ РіСЂСѓР·Р°
+    		int iZ1 = cin.nextInt(); //СЃС‡РёС‚С‹РІР°РЅРёРµ РІС‹СЃРѕС‚С‹ РіСЂСѓР·Р°
+    		double iW1 = cin.nextDouble(); //СЃС‡РёС‚С‹РІР°РЅРёРµ РІРµСЃР° РіСЂСѓР·Р°
 
-	 	int iX0 = cin.nextInt(); //считывание длины груза
+	 	int iX0 = cin.nextInt(); //СЃС‡РёС‚С‹РІР°РЅРёРµ РґР»РёРЅС‹ РіСЂСѓР·Р°
 	 	int iY0 = cin.nextInt();
 	 	int iZ0 = cin.nextInt();
 	 	double iW0 = cin.nextDouble();
     		
-    		// Вычисление
+    		// Р’С‹С‡РёСЃР»РµРЅРёРµ
     		int iXc = iX0/iX1;
     		int iYc = iY0/iY1;
     		int iZc = iZ0/iZ1;
@@ -29,19 +29,19 @@ public class Program {
     		double maxV = maxV(iX0, iY0, iZ0, iW0,iX1, iY1, iZ1, iW1) ;
     		double maxW = maxW(iX0, iY0, iZ0, iW0,iX1, iY1, iZ1, iW1) ;
     		
-    		// Вывод результата на экран
-    		cout.println("Результаты (Кол-во груза в одной ячейке, общий вес груза, коэфф-т заполняемости):");
+    		// Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р° РЅР° СЌРєСЂР°РЅ
+    		cout.println("Р РµР·СѓР»СЊС‚Р°С‚С‹ (РљРѕР»-РІРѕ РіСЂСѓР·Р° РІ РѕРґРЅРѕР№ СЏС‡РµР№РєРµ, РѕР±С‰РёР№ РІРµСЃ РіСЂСѓР·Р°, РєРѕСЌС„С„-С‚ Р·Р°РїРѕР»РЅСЏРµРјРѕСЃС‚Рё):");
     		cout.printf("%1$d %2$.2f %3$.8f", maxC, maxW, maxV);
     	    cin.close();
     	    
-    	    // Если ввести данные 50 150 250 0,5 1200 800 1400 750
-    	    // Результат должен быть 600 300 0,84
+    	    // Р•СЃР»Рё РІРІРµСЃС‚Рё РґР°РЅРЅС‹Рµ 50 150 250 0,5 1200 800 1400 750
+    	    // Р РµР·СѓР»СЊС‚Р°С‚ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ 600 300 0,84
     }
     
-    public static int maxC(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // расчет максимального количества груза в одной ячейке
+    public static int maxC(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // СЂР°СЃС‡РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РіСЂСѓР·Р° РІ РѕРґРЅРѕР№ СЏС‡РµР№РєРµ
     {
 
-        if (X0 < 0) throw new IllegalArgumentException(); //Exception если введенная переменная меньше 1
+        if (X0 < 0) throw new IllegalArgumentException(); //Exception РµСЃР»Рё РІРІРµРґРµРЅРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РјРµРЅСЊС€Рµ 1
         if (Y0 < 0) throw new IllegalArgumentException();
         if (Z0 < 0) throw new IllegalArgumentException();
         if (W0 < 0) throw new IllegalArgumentException();
@@ -50,16 +50,16 @@ public class Program {
         if (Z1 < 0) throw new IllegalArgumentException();
         if (W1 < 0) throw new IllegalArgumentException();
         
-    	// Вычисление
+    	// Р’С‹С‡РёСЃР»РµРЅРёРµ
 		int iXc = X0/X1;
 		int iYc = Y0/Y1;
 		int iZc = Z0/Z1;
 		return iXc*iYc*iZc;
     }
 
-    public static double maxW(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // расчет максимального веса заданного количества груза
+    public static double maxW(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // СЂР°СЃС‡РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РІРµСЃР° Р·Р°РґР°РЅРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РіСЂСѓР·Р°
     {
-        if (X0 < 0) throw new IllegalArgumentException();//Exception если введенная переменная меньше 1
+        if (X0 < 0) throw new IllegalArgumentException();//Exception РµСЃР»Рё РІРІРµРґРµРЅРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РјРµРЅСЊС€Рµ 1
         if (Y0 < 0) throw new IllegalArgumentException();
         if (Z0 < 0) throw new IllegalArgumentException();
         if (W0 < 0) throw new IllegalArgumentException();
@@ -68,7 +68,7 @@ public class Program {
         if (Z1 < 0) throw new IllegalArgumentException();
         if (W1 < 0) throw new IllegalArgumentException();
         
-    	// Вычисление
+    	// Р’С‹С‡РёСЃР»РµРЅРёРµ
 		int iXc = X0/X1;
 		int iYc = Y0/Y1;
 		int iZc = Z0/Z1;
@@ -76,9 +76,9 @@ public class Program {
 		return maxC*W1;
     }
 
-    public static double maxV(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // расчет коэффициента заполняемости
+    public static double maxV(int X0,int Y0, int Z0, double W0, int X1, int Y1,int Z1, double W1) // СЂР°СЃС‡РµС‚ РєРѕСЌС„С„РёС†РёРµРЅС‚Р° Р·Р°РїРѕР»РЅСЏРµРјРѕСЃС‚Рё
     {
-        if (X0 < 0) throw new IllegalArgumentException();//Exception если введенная переменная меньше 1
+        if (X0 < 0) throw new IllegalArgumentException();//Exception РµСЃР»Рё РІРІРµРґРµРЅРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РјРµРЅСЊС€Рµ 1
         if (Y0 < 0) throw new IllegalArgumentException();
         if (Z0 < 0) throw new IllegalArgumentException();
         if (W0 < 0) throw new IllegalArgumentException();
@@ -87,7 +87,7 @@ public class Program {
         if (Z1 < 0) throw new IllegalArgumentException();
         if (W1 < 0) throw new IllegalArgumentException();
         
-    	// Вычисление
+    	// Р’С‹С‡РёСЃР»РµРЅРёРµ
 		int iXc = X0/X1;
 		int iYc = Y0/Y1;
 		int iZc = Z0/Z1;
