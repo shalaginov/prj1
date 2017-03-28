@@ -1,4 +1,4 @@
-package prj1;
+п»їpackage prj1;
 
 import static org.junit.Assert.*;
 
@@ -8,10 +8,10 @@ import org.junit.Test;
 
 public class maxW {
 
-	@Test //аннотация теста
+	@Test //Р°РЅРЅРѕС‚Р°С†РёВ¤ С‚РµСЃС‚Р°
 	public void testMaxW() {
-		double result = Program.maxW(1200, 800, 1400, 750,50, 150, 250, 0.5 ); //тестовые параметры
-		assertTrue(result == 300); //ожидаемый результат
+		double result = Program.maxW(1200, 800, 1400, 750,50, 150, 250, 0.5 ); //С‚РµСЃС‚РѕРІС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
+		assertTrue(result == 300); //РѕР¶РёРґР°РµРјС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚
 	}
 
 }

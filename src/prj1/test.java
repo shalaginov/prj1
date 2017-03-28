@@ -1,4 +1,4 @@
-package prj1;
+п»їpackage prj1;
 
 import static org.junit.Assert.*;
 
@@ -7,10 +7,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class test {
-	@Test //аннотация, метод является тестом
+	@Test //Р°РЅРЅРѕС‚Р°С†РёСЏ, РјРµС‚РѕРґ СЏРІР»СЏРµС‚СЃСЏ С‚РµСЃС‚РѕРј
 	public void testMaxC() {
-		int result = Program.maxC(1200, 800, 1400, 750,50, 150, 250, 0.5 ); //тестовые параметры
-		assertEquals(result, 600); //ожидаемый результат
+		int result = Program.maxC(1200, 800, 1400, 750,50, 150, 250, 0.5 ); //С‚РµСЃС‚РѕРІС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
+		assertEquals(result, 600); //РѕР¶РёРґР°РµРјС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚
 	}
 
 }
