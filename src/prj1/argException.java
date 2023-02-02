@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class argException {
 	
-	@Test (expected = IllegalArgumentException.class) //ожидаемый результат Exception при вводе отрицательного значения бла
+	@Test (expected = IllegalArgumentException.class) //ожидаемый результат Exception при вводе отрицательного значения бла 12314
 	public void testMaxV() {
 			double result = Program.maxV(-2, 150, 250, 0.5, 0, 800, 1400, 750); //тестовые параметры
 	}
